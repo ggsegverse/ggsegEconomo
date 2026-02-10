@@ -3,33 +3,29 @@
 \docType{data}
 \name{economo}
 \alias{economo}
-\alias{economo_3d}
-\title{economo atlas}
+\title{Economo & Koskinas Cytoarchitectonic Atlas}
 \format{
-An object of class \code{brain_atlas} of length 4.
-
-An object of class \code{ggseg3d_atlas} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 4 rows and 4 columns.
+A \link[ggseg.formats:ggseg_atlas]{ggseg.formats::ggseg_atlas} object (cortical).
 }
 \usage{
-economo
-
-economo_3d
+data(economo)
 }
 \description{
-Add a short description of this atlas.
+Brain atlas based on the historical Economo & Koskinas 1925
+cytoarchitectonic parcellation with 15 regions per hemisphere.
+Contains both 2D polygon geometry for \code{\link[ggseg:ggbrain]{ggseg::geom_brain()}} and
+3D vertex indices for \code{\link[ggseg3d:ggseg3d]{ggseg3d::ggseg3d()}}.
 }
 \examples{
 data(economo)
-data(economo_3d)
+economo
 }
 \references{
-Add reference to the atlas description paper. make sure to add the url to pubmed
-    (\href{https://pubmed.ncbi.nlm.nih.gov/xxxxx/}{PubMed})
-    
-\itemize{
- \item{economo}{ - economo atlas}
- \item{economo_3d}{ - economo 3d mesh atlas}
+C.F. von Economo, G.N. Koskinas; Die Cytoarchitektonik Der
+Hirnrinde Des Erwachsenen Menschen; J. Springer (1925)
+
+Pijnenburg et al., NeuroImage, 239, 2021,
+\doi{10.1016/j.neuroimage.2021.118274}
 }
-}
-\concept{ggseg_atlases ggseg3d_atlases}
+\concept{ggseg_atlases}
 \keyword{datasets}

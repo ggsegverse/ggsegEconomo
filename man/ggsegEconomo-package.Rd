@@ -13,8 +13,8 @@ Economo & Koskinas 1925 historical cytoarchitectonic atlas for the 'ggseg' ecosy
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/ggseg/ggsegEconomo}
-  \item Report bugs at \url{https://github.com/ggseg/ggsegEconomo/issues}
+  \item \url{https://github.com/ggsegverse/ggsegEconomo}
+  \item Report bugs at \url{https://github.com/ggsegverse/ggsegEconomo/issues}
 }
 
 }

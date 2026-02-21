@@ -5,7 +5,7 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/ggseg/ggsegEconomo/workflows/R-CMD-check/badge.svg)](https://github.com/ggseg/ggsegEconomo/actions)
+[![R-CMD-check](https://github.com/ggsegverse/ggsegEconomo/workflows/R-CMD-check/badge.svg)](https://github.com/ggsegverse/ggsegEconomo/actions)
 [![DOI](https://zenodo.org/badge/425036347.svg)](https://zenodo.org/badge/latestdoi/425036347)
 
 <!-- badges: end -->
@@ -20,18 +20,18 @@ C.F. von Economo, G.N. Koskinas; Die Cytoarchitektonik Der Hirnrinde Des
 Erwachsenen Menschen; J. Springer (1925)
 
 To learn how to use these atlases, please look at the documentation for
-[ggseg](https://ggseg.github.io/ggseg/) and
-[ggseg3d](https://ggseg.github.io/ggseg3d)
+[ggseg](https://ggsegverse.github.io/ggseg/) and
+[ggseg3d](https://ggsegverse.github.io/ggseg3d)
 
 ## Installation
 
 We recommend installing the ggseg-atlases through the ggseg
-[r-universe](https://ggseg.r-universe.dev/ui#builds):
+[r-universe](https://ggsegverse.r-universe.dev/ui#builds):
 
 ``` r
 # Enable this universe
 options(repos = c(
-    ggseg = 'https://ggseg.r-universe.dev',
+    ggsegverse = 'https://ggsegverse.r-universe.dev',
     CRAN = 'https://cloud.r-project.org'))
 
 # Install some packages
@@ -43,7 +43,7 @@ You can install the released version of ggsegEconomo from
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("ggseg/ggsegEconomo")
+remotes::install_github("ggsegverse/ggsegEconomo")
 ```
 
 ``` r

@@ -1,29 +1,21 @@
-#' economo atlas
+#' Economo & Koskinas Cytoarchitectonic Atlas
 #'
-#' A historical Economo CT atlas based on files
-#' released with  Pijnenburg et al., NeuroImage, 
-#' 239, 2021, (\href{https://doi.org/10.1016/j.neuroimage.2021.118274}{DOI})
-#' Version 1; 15-01-2021.
+#' Brain atlas based on the historical Economo & Koskinas 1925
+#' cytoarchitectonic parcellation with 15 regions per hemisphere.
+#' Contains both 2D polygon geometry for [ggseg::geom_brain()] and
+#' 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
-#' @docType data
-#' @name economo
-#' @keywords datasets
-#' @family ggseg_atlases ggseg3d_atlases
-#' @references C.F. von Economo, G.N. Koskinas; Die Cytoarchitektonik Der Hirnrinde Des Erwachsenen Menschen; J. Springer (1925)
-#' 
-#' \itemize{
-#'  \item{economo}{ - economo atlas}
-#'  \item{economo_3d}{ - economo 3d mesh atlas}
-#'}
+#' @family ggseg_atlases
 #'
-#' @import ggseg
-#' @import ggseg3d
-#' @rdname economo
+#' @references C.F. von Economo, G.N. Koskinas; Die Cytoarchitektonik Der
+#'   Hirnrinde Des Erwachsenen Menschen; J. Springer (1925)
+#'
+#'   Pijnenburg et al., NeuroImage, 239, 2021,
+#'   \doi{10.1016/j.neuroimage.2021.118274}
+#'
+#' @return A [ggseg.formats::ggseg_atlas] object (cortical).
+#' @import ggseg.formats
+#' @export
 #' @examples
-#' data(economo)
-#' data(economo_3d)
-"economo"
-
-#' @rdname economo
-"economo_3d"
-
+#' economo()
+economo <- function() .economo

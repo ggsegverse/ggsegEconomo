@@ -5,10 +5,6 @@
 #' Contains both 2D polygon geometry for [ggseg::geom_brain()] and
 #' 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
-#' @docType data
-#' @name economo
-#' @usage data(economo)
-#' @keywords datasets
 #' @family ggseg_atlases
 #'
 #' @references C.F. von Economo, G.N. Koskinas; Die Cytoarchitektonik Der
@@ -17,8 +13,8 @@
 #'   Pijnenburg et al., NeuroImage, 239, 2021,
 #'   \doi{10.1016/j.neuroimage.2021.118274}
 #'
-#' @format A [ggseg.formats::ggseg_atlas] object (cortical).
+#' @return A [ggseg.formats::ggseg_atlas] object (cortical).
+#' @export
 #' @examples
-#' data(economo)
-#' economo
-"economo"
+#' economo()
+economo <- function() .economo

@@ -52,19 +52,19 @@ library(ggplot2)
 
 ggplot() +
   geom_brain(
-    atlas = economo,
+    atlas = economo(),
     mapping = aes(fill = label),
     position = position_brain(hemi ~ view),
     show.legend = FALSE
   ) +
-  scale_fill_manual(values = economo$palette, na.value = "grey") +
+  scale_fill_manual(values = economo()$palette, na.value = "grey") +
   theme_void()
 ```
 
 ```{r "3d-plot", eval = FALSE}
 library(ggseg3d)
 
-ggseg3d(atlas = economo) |>
+ggseg3d(atlas = economo()) |>
   pan_camera("right lateral")
 ```
 

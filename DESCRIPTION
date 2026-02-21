@@ -12,7 +12,8 @@ Description: Economo & Koskinas 1925 historical cytoarchitectonic atlas for
 License: CC BY 4.0
 Encoding: UTF-8
 Depends:
-    R (>= 3.5),
+    R (>= 3.5)
+Imports:
     ggseg.formats
 Suggests:
     ggseg,

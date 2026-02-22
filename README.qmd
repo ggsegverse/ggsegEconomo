@@ -1,10 +1,11 @@
 ---
-output: github_document
+format: gfm
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, include = FALSE}
+```{r}
+#| include: false
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
@@ -45,7 +46,9 @@ remotes::install_github("ggsegverse/ggsegEconomo")
 
 ## Plot
 
-```{r "plot", fig.height = 7}
+```{r}
+#| label: plot
+#| fig-height: 7
 library(ggsegEconomo)
 library(ggseg)
 library(ggplot2)
@@ -61,7 +64,9 @@ ggplot() +
   theme_void()
 ```
 
-```{r "3d-plot", eval = FALSE}
+```{r}
+#| label: 3d-plot
+#| eval: false
 library(ggseg3d)
 
 ggseg3d(atlas = economo()) |>

@@ -1,60 +1,37 @@
-# Create Economo Atlas
+# Create Economo & Koskinas Atlas
 #
 # Recreates the economo cortical atlas from the economo
-# annotation on fsaverage5 using ggsegExtra.
+# annotation on fsaverage5 using ggseg.extra vertex projection pipeline.
 #
 # Requirements:
 #   - FreeSurfer installed with fsaverage5 subject
-#   - ggsegExtra package
-#   - ggseg.formats package
+#   - ggseg.extra (>= 2.0.0.9000)
+#   - ggseg.formats
 #
 # Run with: Rscript data-raw/make_atlas.R
 
-library(dplyr)
 library(ggseg.extra)
 library(ggseg.formats)
 
-options(freesurfer.verbose = FALSE, rgl.useNULL = TRUE)
-options(chromote.timeout = 120)
-progressr::handlers("cli")
-progressr::handlers(global = TRUE)
+Sys.setenv(FREESURFER_HOME = "/Applications/freesurfer/7.4.1")
 
 annot_files <- file.path(
-  "data-raw", "fsaverage5",
+  here::here("data-raw", "fsaverage5"),
   c("lh.economo.annot", "rh.economo.annot")
 )
 
-for (f in annot_files) {
-  if (!file.exists(f)) {
-    cli::cli_abort("Annotation not found: {.path {f}}")
-  }
-}
-
-cli::cli_h1("Creating economo cortical atlas")
-
-atlas_raw <- create_cortical_from_annotation(
+economo <- create_cortical_from_annotation(
   input_annot = annot_files,
   atlas_name = "economo",
   output_dir = "data-raw",
-  tolerance = 1,
-  smoothness = 2,
+  tolerance = 0,
   skip_existing = TRUE,
   cleanup = FALSE
-)
-
-atlas_raw <- atlas_raw |>
+) |>
   atlas_region_contextual("unknown", "label")
 
-economo <- atlas_raw
-
-cli::cli_alert_success("Atlas created with {nrow(economo$core)} regions")
 print(economo)
+plot(economo)
 
-brain_pals <- stats::setNames(
-  list(economo$palette),
-  economo$atlas
-)
-save(brain_pals, file = here::here("R/sysdata.rda"), compress = "xz")
-
-usethis::use_data(economo, overwrite = TRUE, compress = "xz")
-cli::cli_alert_success("Saved to data/economo.rda")
+.economo <- economo
+usethis::use_data(.economo, overwrite = TRUE, compress = "xz", internal = TRUE)

@@ -1,10 +1,19 @@
 # ggsegEconomo
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/ggsegverse/ggsegEconomo/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ggsegverse/ggsegEconomo/actions/workflows/R-CMD-check.yaml)
+[![r-universe](https://ggsegverse.r-universe.dev/badges/ggsegEconomo)](https://ggsegverse.r-universe.dev/ggsegEconomo)
+<!-- badges: end -->
+
 Economo Atlas for the ggsegverse Ecosystem.
 
 ## Installation
 
 ``` r
+# From r-universe
+install.packages("ggsegEconomo", repos = "https://ggsegverse.r-universe.dev")
+
+# From GitHub
 # install.packages("remotes")
 remotes::install_github("ggsegverse/ggsegEconomo")
 ```

@@ -1,10 +1,21 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
 
 # ggsegEconomo
 
 <!-- badges: start -->
-
 [![R-CMD-check](https://github.com/ggsegverse/ggsegEconomo/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ggsegverse/ggsegEconomo/actions/workflows/R-CMD-check.yaml)
 [![r-universe](https://ggsegverse.r-universe.dev/badges/ggsegEconomo)](https://ggsegverse.r-universe.dev/ggsegEconomo)
 <!-- badges: end -->
@@ -13,7 +24,7 @@ Economo Atlas for the ggsegverse Ecosystem.
 
 ## Installation
 
-``` r
+```{r, eval = FALSE}
 # From r-universe
 install.packages("ggsegEconomo", repos = "https://ggsegverse.r-universe.dev")
 
@@ -23,22 +34,18 @@ remotes::install_github("ggsegverse/ggsegEconomo")
 ```
 
 ## Atlases
-
 ### economo
-
+ 
 Economo & Koskinas 1925 cytoarchitectonic parcellation.
 
-``` r
+```{r economo}
 library(ggsegEconomo)
 plot(economo())
 ```
+## Data source
 
-<img src="man/figures/README-economo-1.png" alt="" width="100%" /> \##
-Data source
+Annotation files from Pijnenburg et al. (2021) supplementary materials.
 
-Annotation files from Pijnenburg et al. (2021) supplementary materials.
-
-- **Reference**: Economo & Koskinas (1925); Pijnenburg et al. (2021)
-  [doi:10.1016/j.neuroimage.2021.118274](https://doi.org/10.1016/j.neuroimage.2021.118274)
+- **Reference**: Economo & Koskinas (1925); Pijnenburg et al. (2021) [doi:10.1016/j.neuroimage.2021.118274](https://doi.org/10.1016/j.neuroimage.2021.118274)
 
 - **Date obtained**: 2021-11-05

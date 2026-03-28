@@ -13,32 +13,22 @@ install.packages("ggsegEconomo", repos = "https://ggsegverse.r-universe.dev")
 remotes::install_github("ggsegverse/ggsegEconomo")
 ```
 
-## Usage
-
-``` r
-library(ggsegEconomo)
-library(ggseg)
-
-plot(economo()) +
-  theme_brain()
-```
-
-## Atlas
+## Atlases
 
 ### economo
 
-Economo & Koskinas 1925 cytoarchitectonic parcellation with 15 regions
-per hemisphere (Pijnenburg et al., 2021).
+Economo & Koskinas 1925 cytoarchitectonic parcellation.
 
-![economo](reference/figures/economo_snapshot.png)
+``` r
+library(ggsegEconomo)
+plot(economo())
+```
 
-economo
+![](reference/figures/README-economo-1.png) \## Data source
 
-## Data source
-
-Annotation files from the supplementary materials of Pijnenburg et
-al. (2021), projected onto fsaverage5.
+Annotation files from Pijnenburg et al. (2021) supplementary materials.
 
 - **Reference**: Economo & Koskinas (1925); Pijnenburg et al. (2021)
   [doi:10.1016/j.neuroimage.2021.118274](https://doi.org/10.1016/j.neuroimage.2021.118274)
+
 - **Date obtained**: 2021-11-05

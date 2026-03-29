@@ -18,4 +18,5 @@
 #' @export
 #' @examples
 #' economo()
+#' plot(economo())
 economo <- function() .economo
